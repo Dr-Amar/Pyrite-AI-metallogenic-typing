@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+title: Artificial intelligence-driven metallogenic typing of pyrite from global ore systems
+message: If you use this workflow, please cite the associated Journal of Geochemical Exploration article.
+type: software
+authors:
+  - family-names: Gul
+    given-names: Muhammad Amar
+  - family-names: Kanwal
+    given-names: Asia
+  - family-names: Faisal
+    given-names: Mohamed
+  - family-names: Zafar
+    given-names: Tehseen
+  - family-names: Awan
+    given-names: Rizwan Sarwar
+  - family-names: Akhtar
+    given-names: Shamim
+  - family-names: Khan
+    given-names: Ibrar
+  - family-names: Yang
+    given-names: Xiaoyong
+doi: 10.1016/j.gexplo.2026.108138
+year: 2026
+repository-code: https://github.com/USERNAME/pyrite-ai-metallogenic-typing
+preferred-citation:
+  type: article
+  title: Artificial intelligence-driven metallogenic typing of pyrite from global ore systems
+  authors:
+    - family-names: Gul
+      given-names: Muhammad Amar
+    - family-names: Kanwal
+      given-names: Asia
+    - family-names: Faisal
+      given-names: Mohamed
+    - family-names: Zafar
+      given-names: Tehseen
+    - family-names: Awan
+      given-names: Rizwan Sarwar
+    - family-names: Akhtar
+      given-names: Shamim
+    - family-names: Khan
+      given-names: Ibrar
+    - family-names: Yang
+      given-names: Xiaoyong
+  journal: Journal of Geochemical Exploration
+  volume: '289'
+  start: '108138'
+  year: 2026
+  doi: 10.1016/j.gexplo.2026.108138

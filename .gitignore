@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data: keep these private unless permissions are clear
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.csv
+data/processed/*.xlsx
+data/processed/*.xls
+data/private/
+
+# Model/output artifacts
+models/*.joblib
+models/*.pkl
+outputs/*
+!outputs/README.md
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

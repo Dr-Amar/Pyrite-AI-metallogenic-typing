@@ -1,0 +1,14 @@
+name: pyrite-typing
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scikit-learn
+  - imbalanced-learn
+  - matplotlib
+  - seaborn
+  - openpyxl
+  - jupyterlab
+  - notebook
