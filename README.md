@@ -1,4 +1,4 @@
-﻿# Artificial Intelligence-Driven Metallogenic Typing of Pyrite from Global Ore Systems
+# Artificial Intelligence-Driven Metallogenic Typing of Pyrite from Global Ore Systems
 
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.gexplo.2026.108138-blue)](https://doi.org/10.1016/j.gexplo.2026.108138)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
@@ -7,7 +7,7 @@
 
 This repository supports the article:
 
-> **Gul, M.A. et al. (2026). Artificial intelligence-driven metallogenic typing of pyrite from global ore systems. _Journal of Geochemical Exploration_, 289, 108138.**  
+> Gul, M.A. et al. (2026). Artificial intelligence-driven metallogenic typing of pyrite from global ore systems. Journal of Geochemical Exploration, 289, 108138.  
 > https://doi.org/10.1016/j.gexplo.2026.108138
 
 The repository provides a public-safe, reproducible machine-learning workflow for metallogenic typing of pyrite trace-element geochemistry from global ore systems.
@@ -24,21 +24,21 @@ The repository provides a public-safe, reproducible machine-learning workflow fo
 
 Pyrite is one of the most common sulfide minerals in ore systems and sedimentary environments. Its trace-element composition can preserve information about ore-fluid source, temperature, physicochemical conditions, metal budget, and metallogenic environment. However, traditional two-element and ternary discrimination diagrams commonly fail because pyrite from different ore systems can show strong compositional overlap.
 
-This study develops an **AI-driven metallogenic typing framework** that classifies pyrite from global ore systems using multielement LA-ICP-MS trace-element data, supervised machine-learning models, class-balancing experiments, blind testing, deposit-scale validation, and interpretable geochemical analysis.
+This study develops an AI-driven metallogenic typing framework that classifies pyrite from global ore systems using multielement LA-ICP-MS trace-element data, supervised machine-learning models, class-balancing experiments, blind testing, deposit-scale validation, and interpretable geochemical analysis.
 
 ---
 
 ## Key scientific innovations
 
-- **Global pyrite geochemical framework** for metallogenic typing across major ore-system classes.
-- **Large multideposit compilation** of pyrite LA-ICP-MS spot analyses from global deposits and stratigraphic settings.
-- **Multielement AI classification** using Co, Ni, Cu, Zn, Se, Ag, Sb, Pb, Bi, and As.
-- **Direct comparison of four supervised ML models:** Random Forest, Support Vector Machine, Gradient Boosting, and Multilayer Perceptron.
-- **Class-imbalance assessment** using standard data, SMOTE oversampling, and RUC/RUS-style undersampling.
-- **Blind test evaluation** using independent test splits.
-- **Deposit-scale LOGO cross-validation** to reduce overoptimistic performance caused by samples from the same deposit being split across training and testing sets.
-- **Explainable geochemical interpretation** through feature importance, permutation importance, t-SNE visualization, box plots, and confusion-matrix analysis.
-- **Interactive web application** for pyrite deposit-type prediction.
+- Global pyrite geochemical framework for metallogenic typing across major ore-system classes.
+- Large multideposit compilation of pyrite LA-ICP-MS spot analyses from global deposits and stratigraphic settings.
+- Multielement AI classification using Co, Ni, Cu, Zn, Se, Ag, Sb, Pb, Bi, and As.
+- Direct comparison of four supervised ML models: Random Forest, Support Vector Machine, Gradient Boosting, and Multilayer Perceptron.
+- Class-imbalance assessment using standard data, SMOTE oversampling, and RUC/RUS-style undersampling.
+- Blind test evaluation using independent test splits.
+- Deposit-scale LOGO cross-validation to reduce overoptimistic performance caused by samples from the same deposit being split across training and testing sets.
+- Explainable geochemical interpretation through feature importance, permutation importance, t-SNE visualization, box plots, and confusion-matrix analysis.
+- Interactive web application for pyrite deposit-type prediction.
 
 ---
 
@@ -53,7 +53,7 @@ This study develops an **AI-driven metallogenic typing framework** that classifi
 | Classes | Orogenic gold, VMS, SEDEX, Porphyry, Skarn, Sedimentary/Barren pyrite |
 | Feature elements | Co, Ni, Cu, Zn, Se, Ag, Sb, Pb, Bi, As |
 | Target variable | Deposit type / metallogenic class |
-| Public data status | Full compiled dataset is not included in this public-safe release; see `DATA_ACCESS.md` |
+| Public data status | Full compiled dataset is not included in this public-safe release; see DATA_ACCESS.md |
 
 ---
 
@@ -67,10 +67,10 @@ This study develops an **AI-driven metallogenic typing framework** that classifi
 
 | Model | Role in the study |
 |---|---|
-| Random Forest (RF) | Tree-based ensemble model; strong baseline and feature-importance interpretation |
-| Support Vector Machine (SVM-RBF) | Non-linear decision-boundary classifier for high-dimensional geochemical space |
-| Gradient Boosting (GB) | Boosted ensemble model for complex nonlinear trace-element patterns |
-| Multilayer Perceptron (MLP) | Neural-network classifier for nonlinear multielement relationships |
+| Random Forest | Tree-based ensemble model and feature-importance interpretation |
+| Support Vector Machine | Non-linear classification in high-dimensional geochemical space |
+| Gradient Boosting | Boosted ensemble model for complex nonlinear trace-element patterns |
+| Multilayer Perceptron | Neural-network classifier for nonlinear multielement relationships |
 
 ---
 
@@ -84,7 +84,7 @@ Class imbalance is a major challenge in global mineral-geochemistry datasets bec
 | SMOTE dataset | Synthetic Minority Over-Sampling Technique used to improve minority-class learning |
 | RUC/RUS-style undersampling | Majority-class reduction used to test the effect of balanced but information-reduced training data |
 
-**Important note:** the current uploaded notebooks implement `RandomUnderSampler` from `imbalanced-learn`. If the final manuscript wording uses strict **RUC / cluster-based undersampling**, this repository should either implement the exact cluster-based approach or consistently describe the implementation as **RUS-style undersampling**.
+Important note: the current uploaded notebooks implement RandomUnderSampler from imbalanced-learn. If the final manuscript wording uses strict RUC / cluster-based undersampling, this repository should either implement the exact cluster-based approach or consistently describe the implementation as RUS-style undersampling.
 
 ---
 
@@ -116,13 +116,13 @@ The study reports that SMOTE-balanced learning produced the strongest overall va
 |---|---:|---:|---|
 | Standard | SVM ~93.09% | SVM ~92.99% | Strong baseline performance |
 | SMOTE | SVM ~97.68% | SVM/MLP ~97.7% / ~97.6% | Best overall accuracy and AUC |
-| RUC/RUS-style undersampling | SVM/MLP/GB ~85â€“86% | GB/RF ~84â€“85% | Lower performance due to majority-class information loss |
+| RUC/RUS-style undersampling | SVM/MLP/GB ~85-86% | GB/RF ~84-85% | Lower performance due to majority-class information loss |
 
 ---
 
 ## Geological interpretation
 
-The AI results are not only predictive; they also provide geochemical insight. Feature-ranking and t-SNE analyses show that elements such as **Ni, Pb, Sb, Se, Cu, and As** contribute strongly to pyrite metallogenic discrimination. These elements reflect differences in temperature, ore-fluid source, metal availability, sulfide partitioning, and sedimentary versus hydrothermal controls.
+The AI results are not only predictive; they also provide geochemical insight. Feature-ranking and t-SNE analyses show that elements such as Ni, Pb, Sb, Se, Cu, and As contribute strongly to pyrite metallogenic discrimination. These elements reflect differences in temperature, ore-fluid source, metal availability, sulfide partitioning, and sedimentary versus hydrothermal controls.
 
 The approach helps overcome limitations of traditional Co-Ni and As-Co-Ni diagrams, where different pyrite genetic classes show substantial compositional overlap.
 
@@ -132,7 +132,8 @@ The approach helps overcome limitations of traditional Co-Ni and As-Co-Ni diagra
 
 An interactive web application accompanies the study and allows users to upload pyrite trace-element compositions and predict metallogenic class using the trained ML workflow.
 
-**Launch app:**  
+Launch app:
+
 https://huggingface.co/spaces/DrAmar/Pyrite_Discrimination
 
 The input Excel sheet should follow the same feature-column sequence as the modelling dataset.
@@ -143,32 +144,32 @@ The input Excel sheet should follow the same feature-column sequence as the mode
 
 ```text
 .
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ raw/                         # Raw compilation; not included in public-safe release
-â”‚   â””â”€â”€ processed/                   # Standardized input data; private release only
-â”œâ”€â”€ notebooks/
-â”‚   â”œâ”€â”€ 00_log_transform_and_standardize.ipynb
-â”‚   â”œâ”€â”€ 01_preprocessing_and_model_checks.ipynb
-â”‚   â”œâ”€â”€ 02_random_forest.ipynb
-â”‚   â”œâ”€â”€ 03_support_vector_machine.ipynb
-â”‚   â”œâ”€â”€ 04_gradient_boosting.ipynb
-â”‚   â”œâ”€â”€ 05_multilayer_perceptron.ipynb
-â”‚   â””â”€â”€ 06_model_performance_heatmaps.ipynb
-â”œâ”€â”€ reports/
-â”‚   â””â”€â”€ figures/
-â”‚       â”œâ”€â”€ graphical_abstract.jpg
-â”‚       â”œâ”€â”€ methods_workflow.png
-â”‚       â””â”€â”€ model_performance_heatmaps_4panel.png
-â”œâ”€â”€ src/
-â”‚   â””â”€â”€ pyrite_typing/
-â”‚       â”œâ”€â”€ __init__.py
-â”‚       â””â”€â”€ config.py
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ environment.yml
-â”œâ”€â”€ CITATION.cff
-â”œâ”€â”€ DATA_ACCESS.md
-â”œâ”€â”€ REPRODUCIBILITY_NOTES.md
-â””â”€â”€ github_setup_commands.md
+|-- data/
+|   |-- raw/                         # Raw compilation; not included in public-safe release
+|   `-- processed/                   # Standardized input data; private release only
+|-- notebooks/
+|   |-- 00_log_transform_and_standardize.ipynb
+|   |-- 01_preprocessing_and_model_checks.ipynb
+|   |-- 02_random_forest.ipynb
+|   |-- 03_support_vector_machine.ipynb
+|   |-- 04_gradient_boosting.ipynb
+|   |-- 05_multilayer_perceptron.ipynb
+|   `-- 06_model_performance_heatmaps.ipynb
+|-- reports/
+|   `-- figures/
+|       |-- graphical_abstract.jpg
+|       |-- methods_workflow.png
+|       `-- model_performance_heatmaps_4panel.png
+|-- src/
+|   `-- pyrite_typing/
+|       |-- __init__.py
+|       `-- config.py
+|-- requirements.txt
+|-- environment.yml
+|-- CITATION.cff
+|-- DATA_ACCESS.md
+|-- REPRODUCIBILITY_NOTES.md
+`-- github_setup_commands.md
 ```
 
 ---
@@ -186,11 +187,18 @@ cd Pyrite-AI-metallogenic-typing
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Or with conda/mamba:
+Windows:
+
+```bash
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Or with conda:
 
 ```bash
 conda env create -f environment.yml
@@ -205,7 +213,7 @@ Place the standardized input file here:
 data/processed/Pyrite_Standarized_data_file_New_Paper.xlsx
 ```
 
-For a public repository, do **not** upload the full compiled dataset unless all co-author, publisher, and source-data permissions are clear.
+For a public repository, do not upload the full compiled dataset unless all co-author, publisher, and source-data permissions are clear.
 
 ### 4. Run notebooks
 
@@ -215,19 +223,19 @@ jupyter lab
 
 Suggested execution order:
 
-1. `00_log_transform_and_standardize.ipynb`
-2. `01_preprocessing_and_model_checks.ipynb`
-3. `02_random_forest.ipynb`
-4. `03_support_vector_machine.ipynb`
-5. `04_gradient_boosting.ipynb`
-6. `05_multilayer_perceptron.ipynb`
-7. `06_model_performance_heatmaps.ipynb`
+1. 00_log_transform_and_standardize.ipynb
+2. 01_preprocessing_and_model_checks.ipynb
+3. 02_random_forest.ipynb
+4. 03_support_vector_machine.ipynb
+5. 04_gradient_boosting.ipynb
+6. 05_multilayer_perceptron.ipynb
+7. 06_model_performance_heatmaps.ipynb
 
 ---
 
 ## Data availability
 
-This public-safe repository does not include the full standardized Excel dataset. The article states that data will be made available on request. See `DATA_ACCESS.md` for data-access guidance.
+This public-safe repository does not include the full standardized Excel dataset. The article states that data will be made available on request. See DATA_ACCESS.md for data-access guidance.
 
 ---
 
