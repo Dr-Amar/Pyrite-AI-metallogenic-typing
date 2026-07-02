@@ -19,6 +19,10 @@ This repository provides a reproducible machine-learning workflow for classifyin
 ## Graphical Abstract
 
 ![Graphical abstract: AI-driven metallogenic typing of pyrite](reports/figures/graphical_abstract.jpg)
+## Methodological Workflow
+
+![Methodological workflow for AI-driven pyrite metallogenic typing](reports/figures/methods_workflow.png)
+
 
 ---
 
