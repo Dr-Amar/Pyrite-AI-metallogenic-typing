@@ -19,10 +19,6 @@ This repository provides a reproducible machine-learning workflow for classifyin
 ## Graphical Abstract
 
 ![Graphical abstract: AI-driven metallogenic typing of pyrite](reports/figures/graphical_abstract.jpg)
-## Methodological Workflow
-
-![Methodological workflow for AI-driven pyrite metallogenic typing](reports/figures/methods_workflow.png)
-
 
 ---
 
@@ -89,46 +85,8 @@ Barren / sedimentary pyrite
 
 ## Methodological workflow
 
-```text
-Global pyrite LA-ICP-MS compilation
-        │
-        ▼
-Data screening and feature selection
-        │
-        ▼
-Missing-value treatment
-        │
-        ▼
-Log transformation
-        │
-        ▼
-Z-score standardization
-        │
-        ▼
-Class-balancing experiments
-  ┌──────────────┬───────────────┬────────────────────┐
-  │ Standard data │ SMOTE data    │ RUC/RUS-style data │
-  └──────────────┴───────────────┴────────────────────┘
-        │
-        ▼
-ML model training and hyperparameter tuning
-  ┌──────────────┬──────────────┬──────────────┬──────────────┐
-  │ Random Forest │ SVM-RBF      │ Gradient Boosting │ MLP       │
-  └──────────────┴──────────────┴──────────────┴──────────────┘
-        │
-        ▼
-Model evaluation
-Accuracy • ROC-AUC • Precision • Recall • F1-score • Confusion matrix
-        │
-        ▼
-Deposit-scale LOGO validation
-        │
-        ▼
-Feature importance + t-SNE geological interpretation
-        │
-        ▼
-Interactive web application
-```
+![Methodological workflow for AI-driven pyrite metallogenic typing](reports/figures/methods_workflow.png)
+
 
 ---
 
